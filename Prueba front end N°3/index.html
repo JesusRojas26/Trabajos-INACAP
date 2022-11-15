@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--bOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+  <!--SCRIPT JS-->
+  <script src="documentJS/text.js"></script>
+
+  <title>Prueba N°3 Front End</title>
+
+</head>
+
+<body>
+
+  <!--DIV PRINCIPAL-->
+  <div class="container">
+
+    <div class="container">
+      <h1 class="text-center">Prueba N°3</h1>
+    </div>
+
+    <!--DIV ROW Y CONTENIDO CON BOOTSTRAP-->
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <!--ACORDION CON BOOTSTRAP-->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <h5><b>Agregar Persona</b></h5>
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <!--FORMULARIO DE REGISTRO DE PERSONAS-->
+                <form action="">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="rutP" placeholder="Rut" name="rutP">
+                    <label for="rutP">Rut</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nombreP" placeholder="Nombre" name="nombreP">
+                    <label for="nombreP">Nombre</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="apellidoP" placeholder="Apellido" name="apellidoP">
+                    <label for="apellidoP">Apellido</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="edadP" placeholder="EdadP" min="0" max="100" name="edadP">
+                    <label for="edadP">Edad</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="correoP" placeholder="Corre" name="correoP">
+                    <label for="correoP">Correo</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="paisP" placeholder="Pais" name="paisP">
+                    <label for="paisP">Pais</label>
+                  </div>
+                  <div class="text-center mb-4 mt-4 ">
+                    <input type="button" value="Agregar" onclick="guardarPersona()">
+                  </div>
+
+                  <!--DIV PARA LAS ALERTS-->
+                  <div  id="colorChange">
+                    <span id="all">
+            
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <h5><b>Inscripción Tour</b></h5>
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <!--FORMULARIO DE INSCRIPCIÓN DE TOUR-->
+                <form action="">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id" placeholder="ID" name="id">
+                    <label for="id">Nº Ficha</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="buscar" placeholder="Persona" name="buscar">
+                    <label for="buscar">Rut Persona</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="buscart" placeholder="Tour" name="buscart">
+                    <label for="buscart">Id Tour</label>
+                  </div>
+                  <div class="text-center mb-4 mt-4 ">
+                    <input type="button" value="Agregar Inscripción" onclick="guardarInscripcion()">
+                  </div>
+
+                  <!--DIV PARA LAS ALERTS-->
+                  <div  id="colorChange1">
+                    <span id="all1">
+            
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <h5><b>Buscar Inscripción</b></h5>
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <!--FORMULARIO DE BUSQUEDA DE INSCRIPCIÓN-->
+                <form action="#">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="buscarins" placeholder="Tour" name="buscarins">
+                    <label for="buscarins">Buscar Inscripción</label>
+                  </div>
+                  <div class="text-center mb-4 mt-4 ">
+                    <input type="button" value="Buscar" onclick="buscarInscripcion()">
+                  </div>
+
+                  <!--DIV PARA LAS ALERTS ERROR LLENAR LOS CAMPOS-->
+                  <div id="colorChange2">
+                    <span id="all2">
+            
+                    </span>
+                  </div>
+
+                  <!--DIV PARA LAS ALERTS ERROR LLENAR LOS CAMPOS-->
+                  <div id="colorChange3">
+                    <span id="all3">
+            
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div>
+          <h2><b>Detalle del Tour</b></h2>
+        </div>
+
+        <!--TABLA DE DETALLES DE LOS TOUR-->
+        <table class="table table-bordered">
+          <tr>
+            <th>Tour Nº1</th>
+            <td>Valle de la luna</td>
+            <td>Valor: 37,5 USD</td>
+          </tr>
+          <tr>
+            <th>Tour Nº2</th>
+            <td>Geyers del Tatio</td>
+            <td>valor: 69 USD</td>
+          </tr>
+          <tr>
+            <th>Tour Nº3</th>
+            <td>Laguna cejar,Ojos del salado</td>
+            <td>valor: 55 USD</td>
+          </tr>
+          <tr>
+        </table>
+  
+        <div>
+          <h2><b>Detalle De Inscripción</b></h2>
+        </div>
+
+        <!--TABLA DE DETALLE DE INSCRIPCIÓN DEL TOUR-->
+        <table style="width: 100%;" class="table table-bordered text-center">
+          <thead>
+            <tr class="bg-secondary">
+              <th>Detalle</th>
+              <th>Inscripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Id</th>
+              <td id="idI"></td>
+            </tr>
+            <tr>
+              <th>Persona</th>
+              <td id="personaI"></td>
+            </tr>
+            <tr>
+              <th>Tour</th>
+              <td id="tourI"></td>
+            </tr>
+            <tr>
+              <th>Valor Base</th>
+              <td id="valorbaseI"></td>
+            </tr>
+            <tr>
+              <th>Descuento</th>
+              <td id="descuentoI"></td>
+            </tr>
+            <tr>
+              <th>Seguro</th>
+              <td id="seguroI"></td>
+            </tr>
+            <tr>
+              <th>Iva</th>
+              <td id="ivaI"></td>
+            </tr>
+            <tr>
+              <th>Valor Final</th>
+              <td id="valorfinalI"></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!--LISTA DE REGISTRO FINAL DEL TOUR-->
+        <div id="colorAlertLista">
+          <div>
+            <h3><b>Listado De Registros</b></h3>
+          </div>
+          <span id="laLista">
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
