@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso Usuario</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+    <div class="container-md">
+        <div class="container-md">
+            <div class="imagen_estatica_superior">
+                <a href="catalogo.html">
+                    <img src="images/banner3.jpg" alt="" height="300px" width="100%">
+                </a>
+            </div>
+        </div>
+
+        <nav class="container-md">
+            <div class="container-md" style="background-color: rgba(128, 128, 128, 0.181);">
+                <div class="row">
+                    <div class="col">
+                        <li class="nav-item dropdown" style="list-style: none;">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gestión de usuarios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="gestionUsuario.html">Mantenedor de usuarios</a></li>
+                            <li><a class="dropdown-item" href="IngresoUsuario.html">Ingreso usuario</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="col">
+
+                        <li class="nav-item dropdown" style="list-style: none;">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gestión de productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                            <li><a class="dropdown-item" href="#">Ingreso de productos</a></li>
+                            <li><a class="dropdown-item" href="gestionProducto.html">Gestión de productos</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item dropdown" style="list-style: none;">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gestión de ventas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action 1</a></li>
+                            <li><a class="dropdown-item" href="#">Action 2</a></li>
+                            <li><a class="dropdown-item" href="#">Action 3</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-md">
+            <div class="boton_superior" style="width: 100%; text-align: right;">
+                <a href="login.html" style="text-decoration: none;">Cerrar sesión <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+                </svg></a>
+            </div>
+        </div>
+
+        <div class="container-md mt-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h3  style="text-align: center;">
+                            Ingreso de usuario
+                        </h3>
+            
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <form class="needs-validation" novalidate>
+
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+            
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                                <label for="floatingInput">Rut</label>
+                            </div>
+            
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                                <label for="floatingInput">Nombre</label>
+                            </div>
+            
+            
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                                <label for="floatingInput">Apellido Paterno</label>
+                            </div>
+            
+                            <!-- Text input -->
+            
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                                <label for="floatingInput">Apellido Materno</label>
+                            </div>
+            
+                            
+                                <div class="mb-3">
+                                
+                                <select id="disabledSelect" class="form-select" required>
+                                    <option selected>Seleccione rol</option>
+                                    <option value="3">Vendedor</option>
+                                    <option value="4">Administrador</option>
+                                </select>
+                                </div>
+                                <div class="mb-3">
+                                    
+                                    <select id="disabledSelect" class="form-select" required>
+                                    <option selected>Seleccione sucursal</option>
+                                    <option value="1">Sucursal 1</option>
+                                    <option value="2">Sucursal 2</option>
+                                    </select>
+                                </div>
+            
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                                <label for="floatingPassword">Contraseña</label>
+                            </div>
+            
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                                <label for="floatingPassword">Repetir Contraseña</label>
+                            </div>
+            
+                            <button type="submit" class="btn btn-primary btn-block mb-4">Agregar</button>
+            
+                            <!-- Submit button -->
+            
+                        </form>
+                        <script src="js/validar.js"></script>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <footer class="text-center text-white mt-5" style="background-color: gray;">
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4" style="display: flex; justify-content: center;">
+
+            <a class="m-3" href="https://es-la.facebook.com/" target="_blank">
+                <ion-icon name="logo-facebook" size="large" style="color: white;"></ion-icon>
+            </a>
+
+            <a class="m-3" href="https://www.instagram.com/?hl=es-la" target="_blank">
+                <ion-icon name="logo-instagram" size="large" style="color: white;"></ion-icon>
+            </a>
+
+            <a class="m-3" href="https://www.linkedin.com/login/es" target="_blank">
+                <ion-icon name="logo-linkedin" size="large" style="color: white;"></ion-icon>
+            </a>
+        
+            <a class="m-3" href="https://www.youtube.com/" target="_blank">
+                <ion-icon name="logo-youtube" size="large" style="color: white;"></ion-icon>
+            </a>
+        
+            <a class="m-3" href="https://twitter.com/i/flow/login" target="_blank">
+                <ion-icon name="logo-twitter" size="large" style="color: white;"></ion-icon>
+            </a>
+            
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        
+        <!-- Copyright -->
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            &copy; 2022 Copyright: Jesús Rojas and Juan Marín
+        </div>
+        <!-- Copyright -->
+        </footer>
+    </div>
+</body>
+</html>
