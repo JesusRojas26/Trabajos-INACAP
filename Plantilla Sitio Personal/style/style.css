@@ -1,0 +1,275 @@
+/* Creando nuestras propias paletas de color*/
+:root{
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #ffc107;
+  --secundario: #0097A7;
+  --gris: #757575;
+  --terciario: #00ff00e5;
+}
+/*==========================================*/
+
+/* html y body poner*/
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+
+*,*::before,*::after{
+  box-sizing: inherit;
+}
+
+body{
+  font-size: 16px; /* 1 rem = 10px*/
+  background-image: linear-gradient(to top, #dfe9f377 0%, var(--blanco) 100%);
+}
+
+.sombra{
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.84);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.84);
+  box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.84);
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+
+}
+/*========================================*/
+
+h1{
+  font-size: 3.8rem;
+}
+h2{
+  font-size: 2.8rem;
+}
+h3{
+  font-size: 1.8rem;
+}
+h1,h2,h3{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo span{
+  font-size: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+}
+
+.contenedor{
+  max-width: 120rem;
+  margin: 0px auto;
+}
+
+.nav-bg{
+  background-color: var(--secundario);
+}
+
+.navegacion-principal{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px){
+  .navegacion-principal{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.navegacion-principal a{
+  display: block;
+  text-align: center;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+  background-color: var(--terciario);
+  color: var(--oscuro);
+}
+
+.hero{
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.contenido-hero{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+
+  /* Con este codigo puedo centrar orizontal y verticarmente*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+  color: var(--blanco);
+}
+
+.ubicacion{
+  display: flex;
+  align-items: flex-end;
+}
+
+.boton{
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: .5rem;
+  width: 90%;
+  text-align: center;
+  border: none;
+}
+
+/* utilidades */
+.w-sm-100{
+  width: 100%;
+}
+@media (min-width: 768px){
+  .w-sm-100{
+    width: auto;
+  }
+}
+
+.flex{
+  display: flex;
+}
+
+.alinear-derecha{
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px){
+  .boton{
+    width: auto;
+  }
+}
+
+.boton:hover{
+  cursor: pointer;
+}
+
+/*Scroll snap*/
+.navegacion-principal,
+.servicios,
+.formulario{
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+/*Servicio*/
+@media (min-width: 768px){
+  .servicios{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    /*tambien puede ser en fracciones que es con (1fr = 33.3%) o 
+    con repeat(3, 1fr) el primer valor es para saber cuanta veces repetir el fr*/
+    /* grid codigo corto
+    grid: 200px 800px / 300px 300px 
+    */
+    column-gap: 1rem;
+  }
+}
+.servicio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.servicio h3{
+ color: var(--secundario);
+ font-weight: normal;
+}
+
+.servicio p{
+  line-height: 1.5;
+  text-align: centerx;
+}
+
+.servicio .iconos{
+  width: 15rem;
+  height: 15rem;
+  background-color: var(--terciario);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.formulario{
+ background-color: var(--gris);
+ width: min(60rem, 100%);/*min utiliza el valor mas pequeño*/
+ margin: 0 auto;
+ padding: 2rem;
+ border-radius: 1rem
+}
+
+.formulario fieldset{
+  border: none;
+}
+
+.formulario legend{
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--terciario);
+}
+@media (min-width: 768px){
+  .contenedor-campos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto 20rem;
+    column-gap: 1rem;
+  } 
+  
+  .campo:nth-child(3),
+  .campo:nth-child(4){
+    grid-column: 1 / 3;
+  }
+}
+
+.campo{
+  margin-bottom: 1rem;
+}
+
+.campo label{
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: .5rem;
+  display: block;
+}
+
+.campo input[type="text"],[type="tel"],[type="email"], .input-text{
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+.footer{
+  text-align: center;
+}
+
+textarea{
+  resize: none;
+}
